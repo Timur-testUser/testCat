@@ -38,16 +38,16 @@ class BookController extends Controller
 
         return redirect('/contact');
     }
-    public function showOneMessage($author_id){
-        $author = new author;
-
-        return view('book', ['data' => $author->find($author_id)]);
-    }
 
     public function updateMessage($author_id){
         $author = new author;
 
         return view('update-book', ['data' => $author->find($author_id)]);
+    }
+
+    public function deleteMessage($author_id){
+        author::find($author_id)->delete();
+        return redirect('/contact');
     }
 
     public function updateMessageSubmit($author_id, BookRequest $req) {
@@ -58,11 +58,4 @@ class BookController extends Controller
 
         return redirect('/contact');
     }
-
-//    public function deleteBook(BookRequest $req, $id)
-//    {
-//        $meta = DB::table('books')->where('book_id', $id);
-//        $meta->delete();
-//        return redirect('/contact');
-//    }
 }

@@ -5,7 +5,7 @@
     {{csrf_field()}}
     <div class="form-group">
         <label for="name">Автор</label>
-        <input type="text" value="{{$data->author_id}}" name="name_author" placeholder="Автор" id="name_author" class="form-control">
+        <input type="text" value="{{$data->name_author}}" name="name_author" placeholder="Автор" id="name_author" class="form-control">
     </div>
 
     <div class="form-group">

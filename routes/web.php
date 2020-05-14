@@ -20,6 +20,7 @@ Route::post('/contact/submit','BookController@addBook' , function () {
 // нвовое
 Route::get('/contact/{author_id}','BookController@showOneMessage')->name('book-data-one');
 Route::get('/contact/{author_id}/update','BookController@updateMessage')->name('book-update');
+Route::get('/contact/{author_id}/delete','BookController@deleteMessage')->name('book-delete');
 Route::post('/contact/{author_id}/update','BookController@updateMessageSubmit')->name('book-update-submit');
 //
 //Route::get('/contact/{id}','BookController@deleteBook')->name('delete-form');
