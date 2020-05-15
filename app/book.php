@@ -4,12 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class book extends Model
-{
+class book extends Model {
+
+    // убираем с миграции дату
     public $timestamps = false;
+
     protected $table = 'books';
-    protected $fillable = [
-        'book_id', 'name_book','count_book'
-    ];
-    //
+
+    // id по умолчанию для данной сущности
+    protected $primaryKey = 'book_id';
+
 }
